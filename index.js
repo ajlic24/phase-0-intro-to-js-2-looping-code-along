@@ -26,12 +26,32 @@ function writeCards(names, event) {
 
 writeCards(names, `birthday`);*/
 
-function countDown(number) {
-    //let i = number;
-    while (number >= 0) {
-        console.log(number);
-        number--;
+// function countDown(number) {
+//     //let i = number;
+//     while (number >= 0) {
+//         console.log(number);
+//         number--;
+//     }
+// }
+
+// countDown(5);
+
+const writeCards = (names, event) => {
+    const newArray = []
+    for(let counter = 0; counter < names.length; counter++) {
+        let msg = `Thank you, ${names[counter]}, for the wonderful ${event} gift!`
+        newArray.push(msg);
+    }
+    return newArray;
+}
+// console.log(writeCards(['Ada', `Brendan`, `Ali`]))
+
+const countDown = (num) => {
+    let counter = num
+    while (counter >= 0) {
+        console.log(counter)
+        counter--
     }
 }
 
-countDown(5);
+countDown(10)
